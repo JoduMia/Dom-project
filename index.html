@@ -10,9 +10,12 @@
 <body>
     <div id="root">
         <div>
-            <input type="text" id="uninput" placeholder="Type Unlock to unlock">
-            <button id="copybtn" disabled>COPY</button>
-            <input type="text" id="input" disabled placeholder="COLOR CODE">
+            <div class="input-group">
+                <input type="text" id="uninput" placeholder="Type Unlock">
+                <div id="inputdiv">#</div>
+                <input type="text" id="input" disabled placeholder="COLOR CODE">
+                <button id="copybtn" disabled>COPY</button>
+            </div>
         </div>
         <button id="btn" disabled>CHANGE COLOR</button>
     </div>

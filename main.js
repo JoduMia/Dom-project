@@ -20,7 +20,7 @@ function main() {
 // eventlisten 1
     btn.addEventListener('click', function () {
         const color = changeColor();
-        root.style.backgroundColor = color;
+        root.style.backgroundColor = `#${color} `;
         input.value = color.toUpperCase();
     })
 
@@ -49,7 +49,7 @@ function main() {
     input.addEventListener('keyup', function (event) {
         const colorcode = event.target.value;
         if(isValidHex(colorcode)) {
-            root.style.backgroundColor = colorcode;
+            root.style.backgroundColor = `#${colorcode} `;
         }
     })
 }
@@ -61,7 +61,7 @@ function changeColor() {
     const red = Math.floor(Math.random() * 255);
     const green = Math.floor(Math.random() * 255);
     const blue = Math.floor(Math.random() * 255);
-    const rgb = `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`;
+    const rgb = `${red.toString(16)}${green.toString(16)}${blue.toString(16)}`;
     return rgb;
 }
 
@@ -106,9 +106,7 @@ function unlock() {
 
 //  cheking the valid color code functio
 function isValidHex(code) {
-    if(code.length != 7) return false;
-    if(code[0] != '#') return false;
-    code = code.substring(1);
+    if(code.length != 6) return false;
     return /^[0-9A-Fa-f]{6}$/i.test(code);
 }
 

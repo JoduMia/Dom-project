@@ -8,9 +8,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     width: 100%;
     height: 100vh;
     background-color: rgb(14, 31, 68);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
 }
 
 #btn {
@@ -19,35 +27,59 @@
     color: bisque;
     font-weight: bold;
     font-size: 20px;
-    box-shadow: 0, 4px, 8px, rgb(255,255,255,0.2);
+    box-shadow: 4px 1px 10px 6px rgba(0,0,0,0.2);
     border-radius: 20px;
     cursor: pointer;
+    border: none;
 }
+
 
 #input {
     width: 150px;
-    padding: 8px 12px;
-    margin-bottom: 15px;
-    border-radius: 20px;
+    padding: 8px 12px 8px 20px;
+    font-size: 15px;
+    background-color: rgb(39, 66, 243);
+    color: whitesmoke;
+    font-weight: bold;
+    border: none;
+}
+
+input,button {
+    border: none;
+}
+
+input:focus, button:focus {
+    outline: none;
+    border: none;
+}
+
+#inputdiv {
+    padding: 8px 0 8px 12px;
     font-size: 15px;
     background-color: rgb(39, 66, 243);
     color: whitesmoke;
     text-align: center;
     font-weight: bold;
+    position: absolute;
+    left: 9.75rem;
 }
 #input::placeholder{
     color: white;
+}
 
+#uninput::placeholder{
+    color: black;
+    font-weight: bold;
 }
 
 #uninput {
     width: 150px;
     padding: 8px 12px;
-    margin-bottom: 15px;
     border-radius: 20px;
     font-size: 15px;
     background-color: white;
     color: black;
+    font-weight: bold;
 }
 
 #copybtn {
@@ -68,6 +100,7 @@ button:disabled {
     padding: 10px 15px;
     border-radius: 5px;
     color: white;
+    box-shadow: 4px 1px 10px 6px rgba(0,0,0,0.2);
 }
 .toast-message span {
     font-weight: bold;
