@@ -14,6 +14,15 @@
     background-color: rgb(14, 31, 68);
 }
 
+#root h1 {
+    max-width: 60%;
+    margin: 0 atuo;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.108);
+    padding: 10px;
+}
+
 .input-group {
     display: flex;
     align-items: center;
