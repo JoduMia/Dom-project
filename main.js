@@ -39,6 +39,13 @@ function main() {
 
     })
 
+    //eventlisten 4 for change bgcolor with input hex code
+
+    input.addEventListener('keyup', function (event) {
+        const colorcode = event.target.value;
+        root.style.backgroundColor = colorcode
+    })
+
 }
 
 // changecolor function rgb type
@@ -65,11 +72,12 @@ function changeColor() {
 function toastMessage(msg) {
     div = document.createElement('div');
     const p = document.createElement('p')
-    p.innerHTML = `<span>' ${msg} '</span> Copied !!! `;
-    div.appendChild(p);
-    document.body.appendChild(div);
-    div.className = 'toast-message slide-in';
-    div.addEventListener('click', function () {
+    if(msg){
+        p.innerHTML = `<span>' ${msg} '</span> Copied !!! `;
+        div.appendChild(p);
+        document.body.appendChild(div);
+        div.className = 'toast-message slide-in';
+        div.addEventListener('click', function () {
         this.classList.remove('slide-in');
         this.classList.add('slide-out');
 
@@ -78,6 +86,10 @@ function toastMessage(msg) {
         })
 
     })
+    } else {
+        alert('Nothing to copy !!!')
+    }
+
 }
 
 
